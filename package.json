@@ -51,7 +51,7 @@
     "jsdoc": "^3.0.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
