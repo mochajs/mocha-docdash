@@ -38,13 +38,13 @@
     "auto-changelog": "^2.3.0",
     "browser-sync": "^2.27.5",
     "husky": "^4.2.5",
-    "jsdoc": "^3.6.7",
+    "jsdoc": "^4.0.3",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "watch-run": "^1.2.5"
   },
   "peerDependencies": {
-    "jsdoc": "^3.6.7"
+    "jsdoc": "^4.0.3"
   },
   "engines": {
     "node": ">=12"
