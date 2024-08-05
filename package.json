@@ -34,9 +34,6 @@
     "endOfLine": "auto",
     "singleQuote": true
   },
-  "dependencies": {
-    "taffydb": "^2.7.3"
-  },
   "devDependencies": {
     "auto-changelog": "^2.3.0",
     "browser-sync": "^2.27.5",
@@ -64,5 +61,8 @@
     "*.{md,html,css,js,json,toml}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@jsdoc/salty": "^0.2.8"
   }
 }
