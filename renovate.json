@@ -1,6 +1,56 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    ":automergeDisabled",
+    ":combinePatchMinorReleases",
+    ":dependencyDashboard",
+    ":ignoreModulesAndTests",
+    ":ignoreUnstable",
+    ":maintainLockFilesWeekly",
+    ":noUnscheduledUpdates",
+    ":prConcurrentLimit20",
+    ":prHourlyLimitNone",
+    ":prImmediately",
+    ":semanticCommits",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":separateMajorReleases",
+    "helpers:disableTypesNodeMajor",
+    "npm:unpublishSafe",
+    "replacements:all",
+    "schedule:weekly",
+    "workarounds:all"
+  ],
+  "supportPolicy": [
+    "all"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "all non-major dev dependencies",
+      "groupSlug": "all-dev",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "enabled": false,
+      "matchDepTypes": ["peerDependencies"]
+    },
+    {
+      "enabled": true,
+      "matchDepTypes": ["peerDependencies"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitScope": "",
+      "semanticCommitType": "feat!"
+    }
   ]
 }
